@@ -1,0 +1,50 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    font-family: "paybooc-Light", sans-serif;
+}
+
+div{
+    margin: 15rem auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid black;
+}
+
+h1, h2{
+    color:gold;
+}
+
+li{
+    list-style: none;
+    line-height: 3rem;
+}
+
+button{
+    padding: 0.5rem;
+    border-radius: 15px;
+    animation: gradient1 5s ease infinite;
+    background: linear-gradient(
+        90deg,
+        rgb(255, 187, 0) 0%,
+        rgb(255, 249, 199) 100%
+    );
+    border: none;
+    margin: 0.5rem
+}
+button:hover {
+    transform: scale(1.2);
+}
+
+.active{
+    color:yellowgreen;
+}
+
+.hidden{
+    display: none
+}
+
+.done{
+    text-decoration: line-through;
+}
