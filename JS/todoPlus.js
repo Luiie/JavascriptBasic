@@ -58,15 +58,19 @@ function saveToDos(){
 
 function handleToDoSubmit(event) {
     event.preventDefault();
-    const newTodo = {
-        id : Date.now(),
-        text : toDoInput.value,
-        done : false
-    };
-    toDos.push(newTodo);
-    saveToDos()
-    paintToDo(newTodo);
-    toDoInput.value = "";
+    if (toDoInput.value !== ""){
+        const newTodo = {
+            id : Date.now(),
+            text : toDoInput.value,
+            done : false
+        };
+        toDos.push(newTodo);
+        saveToDos()
+        paintToDo(newTodo);
+        toDoInput.value = "";
+    } else {
+        alert("Write the todo form")
+    }
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
