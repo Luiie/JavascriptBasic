@@ -48,7 +48,7 @@ function doneToDo(event) {
             }
         }
     });
-    console.log(toDos)
+    // console.log(toDos)
     saveToDos();
 }
 
