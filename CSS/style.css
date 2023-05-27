@@ -1,6 +1,8 @@
 body{
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    background-attachment:scroll;
     text-align: center;
     font-family: "paybooc-Light", sans-serif;
 }
