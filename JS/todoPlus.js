@@ -9,6 +9,15 @@ const TODOS_KEY = "todos";
 function paintToDo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
+    const width = screen.width;
+    li.animate({
+          transform: [`translateX(${width}px)`,'translateX(0px)']
+        },
+        {
+          duration: 500,
+          easing: 'ease'
+        }
+    );
     const span = document.createElement("span");
     const delButton = document.createElement("button");
     const DonButton = document.createElement("button");
@@ -28,8 +37,17 @@ function paintToDo(newTodo){
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
+    const width = screen.width;
+    li.animate({
+        transform: ['translateX(0px)', `translateX(${width}px)`]
+      },
+      {
+        duration: 500,
+        easing: 'ease'
+      }
+  );
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id))
-    li.remove();
+    setTimeout(() => li.remove(), 500);
     saveToDos()
 }
 
